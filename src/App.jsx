@@ -2,7 +2,7 @@ import { useState } from 'react'
 
 import './App.css'
 import GeneralInfo from './components/GeneralInfo'
-import EducationInfo from './components/education'
+import EducationInfo from './components/Education'
 import ExperienceInfo from './components/PracticalExperience'
 
 function App() {
