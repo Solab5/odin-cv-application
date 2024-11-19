@@ -1,0 +1,5 @@
+.info-name, .info-email, .info-phone {
+    font-size: 1.2em; /* Adjust font size */
+    
+    margin: 10px 0; /* Add some margin */
+}

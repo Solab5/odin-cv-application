@@ -1,4 +1,5 @@
 import { useState } from "react";
+import '../styles/GeneralInfo.css'
 
 function GeneralInfo() {
     const [name, setName] = useState("");
@@ -8,7 +9,7 @@ function GeneralInfo() {
     const [submitted, setSubmitted] = useState(false);
 
     return(
-        <div>
+        <div className="general-info fill-form">
             <h2>General Info </h2>
             {!submitted ? (
                 <>
@@ -30,14 +31,14 @@ function GeneralInfo() {
                     value={phone}
                     onChange={(e) => setPhone(e.target.value)}
                 />
-                <button onClick={() => setSubmitted(true)}>Submit</button>
+                <button className="submit" onClick={() => setSubmitted(true)}>Submit</button>
             </>
             ): (
                 <>
-                <p>{name}</p>
-                <p>{email}</p>
-                <p>{phone}</p>
-                <button onClick={() => setSubmitted(false)}>Edit</button>
+                <p className="info-name"><strong>Name:</strong> {name}</p>
+                <p className="info-email"><strong>Email:</strong> {email}</p>
+                <p className="info-phone"><strong>Phone:</strong> {phone}</p>
+                <button className="edit" onClick={() => setSubmitted(false)}>Edit</button>
                 </>
             )}
             

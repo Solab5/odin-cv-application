@@ -9,7 +9,7 @@ function ExperienceInfo() {
 
   const [submitted, setSubmitted] = useState(false)
   return(
-    <div>
+    <div className="practical-experience fill-form">
       <h2>Practical Experience </h2>
       {!submitted ? (
         <>
@@ -43,7 +43,7 @@ function ExperienceInfo() {
         value={end}
         onChange={(e) => {SetEnd(e.target.value)}}
         />
-        <button onClick={() => setSubmitted(true)}>Submit</button>
+        <button className="submit" onClick={() => setSubmitted(true)}>Submit</button>
         </>
       ): (
         <>
@@ -52,7 +52,7 @@ function ExperienceInfo() {
         <p>{responsibility}</p>
         <p>{start}</p>
         <p>{end}</p>
-        <button onClick={() => setSubmitted(false)}>Edit</button>
+        <button className="edit" onClick={() => setSubmitted(false)}>Edit</button>
         </>
       )}
         

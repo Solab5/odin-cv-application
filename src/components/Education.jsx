@@ -8,7 +8,7 @@ function EducationInfo() {
   const [submitted, setSubmitted] = useState(false);
 
   return(
-    <div>
+    <div className="education-info fill-form">
         <h2>Education </h2>
         {!submitted ? (
         <>
@@ -30,14 +30,14 @@ function EducationInfo() {
           value={date}
           onChange={(e) => {setDate(e.target.value)}}
           />
-          <button onClick={() => setSubmitted(true)}>Submit</button>
+          <button className="submit" onClick={() => setSubmitted(true)}>Submit</button>
         </>
         ): (
           <>
           <p>{school}</p>
           <p>{title}</p>
           <p>{date}</p>
-          <button onClick={() => setSubmitted(false)}>Edit</button>
+          <button className="edit" onClick={() => setSubmitted(false)}>Edit</button>
           </>
         )}
         

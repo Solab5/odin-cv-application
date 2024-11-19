@@ -10,6 +10,7 @@ function App() {
 
   return (
     <div>
+      <h1>CV</h1>
      <GeneralInfo />
      <EducationInfo />
      <ExperienceInfo />
